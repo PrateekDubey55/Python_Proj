@@ -26,8 +26,8 @@ while True:
         record_dictionary[i]['Name'] = name.title()
         record_dictionary[i]['Age'] = age
         record_dictionary[i]['Contact'] = contact
-        i = int(input("Press 0 to exit or any other key to conitnue\n"))
-        if(i == 0) : break
+        i = input("Press 0 to exit or any other key to conitnue\n")
+        if(i == '0') : break
     elif cmd_input == 2:
         flag = 0
         name = input("Enter Name to update: ").title()
@@ -68,8 +68,8 @@ while True:
         else: 
             print("WRONG INPUT!!!")
             break
-        i = int(input("Press 0 to exit or any other key to conitnue\n"))
-        if(i == 0) : break
+        i = input("Press 0 to exit or any other key to conitnue\n")
+        if(i == '0') : break
     elif cmd_input == 3:
         flag = 0
         name = input("Enter Name to delete: ").title()
@@ -84,15 +84,15 @@ while True:
                     break
         if flag == 0:
             print("No Record Found!!!")
-        i = int(input("Press 0 to exit or any other key to conitnue\n"))
-        if(i == 0) : break
+        i = input("Press 0 to exit or any other key to conitnue\n")
+        if(i == '0') : break
     elif cmd_input == 4:
         for s_id, s_info in record_dictionary.items():
             print("\nStudent ID: ",s_id)
             for key,value in s_info.items():
                 print(key + ':',value)
-        i = int(input("Press 0 to exit or any other key to conitnue\n"))
-        if(i == 0) : break
+        i = input("Press 0 to exit or any other key to conitnue\n")
+        if(i == '0') : break
     elif cmd_input == 5:
         flag = 0
         name = input("Enter Name: ").title()
@@ -104,9 +104,9 @@ while True:
                     break
         if flag == 0: 
             print("No Record Found!!!")
-        i = int(input("Press 0 to exit or any other key to conitnue\n"))
-        if(i == 0) : break
+        i = input("Press 0 to exit or any other key to conitnue\n")
+        if(i == '0') : break
     else:
         print("Invalid Input!")
-        i = int(input("Press 0 to exit or any other key to conitnue\n"))
-        if(i == 0) : break
+        i = input("Press 0 to exit or any other key to conitnue\n")
+        if(i == '0') : break
