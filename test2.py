@@ -31,7 +31,7 @@ while True:
     elif cmd_input == 2:
         flag = 0
         name = input("Enter Name to update: ").title()
-        status = input("Enter to update \t1. Name \t2. Age \t3. Contact\n")
+        status = eval(input("Enter to update \t1. Name \t2. Age \t3. Contact\n"))
         if status == 1:
             new_Name = input("Enter New Name: ")
             for s_id,s_info in record_dictionary.items():
@@ -73,12 +73,14 @@ while True:
     elif cmd_input == 3:
         flag = 0
         name = input("Enter Name to delete: ").title()
-        for s_id,s_info in record_dictionary.items():
+        record_dictionary1 = record_dictionary.copy()
+        for s_id,s_info in record_dictionary1.items():
             for key,value in s_info.items():
                 if value == name:
                     flag = 1
                     del(record_dictionary[s_id])
                     print("Record deleted")
+                    # record_dictionary = record_dictionary1.copy()
                     break
         if flag == 0:
             print("No Record Found!!!")
