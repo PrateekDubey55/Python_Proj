@@ -16,8 +16,8 @@ record_dictionary = {
     }
 }
 while True:
-    cmd_input = eval(input("\n1. Insert \t2. Update \t3. Delete \t4. Retrieve All \t5. Enter Name to find data\nEnter a command: "))
-    if cmd_input == 1:
+    cmd_input = input("\n1. Insert \t2. Update \t3. Delete \t4. Retrieve All \t5. Enter Name to find data\nEnter a command: ")
+    if cmd_input == '1':
         name = input("Enter Name: ")
         age = int(input("Enter Age: "))
         contact = int(input("Enter Contact Number: "))
@@ -28,11 +28,11 @@ while True:
         record_dictionary[i]['Contact'] = contact
         i = input("Press 0 to exit or any other key to conitnue\n")
         if(i == '0') : break
-    elif cmd_input == 2:
+    elif cmd_input == '2':
         flag = 0
         name = input("Enter Name to update: ").title()
-        status = eval(input("Enter to update \t1. Name \t2. Age \t3. Contact\n"))
-        if status == 1:
+        status = input("Enter to update \t1.Name\t2. Age\t3.Contact\n")
+        if status == '1':
             new_Name = input("Enter New Name: ")
             for s_id,s_info in record_dictionary.items():
                 for key,value in s_info.items():
@@ -43,7 +43,7 @@ while True:
                         break
             if flag == 0:
                 print("No Record Found!!!")
-        elif status == 2:
+        elif status == '2':
             new_Age = input("Enter New Age: ")
             for s_id,s_info in record_dictionary.items():
                 for key,value in s_info.items():
@@ -54,7 +54,7 @@ while True:
                         break
             if flag == 0:
                 print("No Record Found!!!")
-        elif status == 3:
+        elif status == '3':
             new_Contact = input("Enter New Contact: ")
             for s_id,s_info in record_dictionary.items():
                 for key,value in s_info.items():
@@ -70,7 +70,7 @@ while True:
             break
         i = input("Press 0 to exit or any other key to conitnue\n")
         if(i == '0') : break
-    elif cmd_input == 3:
+    elif cmd_input == '3':
         flag = 0
         name = input("Enter Name to delete: ").title()
         record_dictionary1 = record_dictionary.copy()
@@ -86,14 +86,14 @@ while True:
             print("No Record Found!!!")
         i = input("Press 0 to exit or any other key to conitnue\n")
         if(i == '0') : break
-    elif cmd_input == 4:
+    elif cmd_input == '4':
         for s_id, s_info in record_dictionary.items():
             print("\nStudent ID: ",s_id)
             for key,value in s_info.items():
                 print(key + ':',value)
         i = input("Press 0 to exit or any other key to conitnue\n")
         if(i == '0') : break
-    elif cmd_input == 5:
+    elif cmd_input == '5':
         flag = 0
         name = input("Enter Name: ").title()
         for s_id,s_info in record_dictionary.items():
