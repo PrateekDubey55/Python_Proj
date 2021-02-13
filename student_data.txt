@@ -1,7 +1,0 @@
-record_dictionary = {
-    1: {
-        'Name': 'Prateek',
-        'Age': 21,
-        'Contact': 1234568970
-    }
-}
